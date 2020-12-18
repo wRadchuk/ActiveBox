@@ -2,6 +2,15 @@
 
 /***************************
     Main
+
+Здесь содержатся основные стили страницы. Убираю внешние отступы, задаю шрифт, размер шрифта и цвет шрифта который чаще используется. Подключил среднее сглаживание шрифтов (не везде работает) и указал цвет фона для body.
+
+Для всех элементов, а также для селекторов before и after указал алгоритм подсчета границ.
+
+Убрал внешние отступы у всех заголовков.
+
+Убрал внешние отступы у параграфа и установил отступ снизу 10 пикселей.
+
 ****************************/
 body {
     margin: 0;
@@ -13,7 +22,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    background-color: #000;
+    background-color: #fff;
 
 
     /* Доп. шрифты
@@ -22,25 +31,24 @@ body {
     */
 
 }
-
 *, *:before, *:after {
     box-sizing: border-box;
 }
-
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
-
 p {
     margin: 0 0 10px;
 }
 
 
-
 /***************************
     Container
-****************************/
 
+Если ширина устройства меньше 1170 пикселей, то контейнер займет всю доступную ширину устройства.
+
+Убрал внешние отступы сверху и снизу и выровнял контейнер по центру окна.
+****************************/
 .container {
     width: 100%;
     max-width: 1170px;
@@ -48,11 +56,9 @@ p {
 }
 
 
-
 /***************************
     Header
 ****************************/
-
 .header {
     width: 100%;
     height: 100px;
@@ -62,7 +68,6 @@ p {
     z-index: 1000;
 
 }
-
 .header__inner {
     display: flex;
     justify-content: space-between;
@@ -73,18 +78,15 @@ p {
 }
 
 
-
 /***************************
     Nav
 ****************************/
-
 .nav {
     display: flex;
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
 }
-
 .nav__link {
     margin-left: 50px;
 
@@ -94,11 +96,9 @@ p {
 
     transition: opacity .1s linear;
 }
-
 .nav__link:first-child {
 margin-left:    0;
 }
-
 .nav__link:hover {
     opacity: 1;
 
@@ -107,11 +107,9 @@ margin-left:    0;
 }
 
 
-
 /***************************
     Intro
 ****************************/
-
 .intro {
     display: flex;
     flex-direction: column;
@@ -124,7 +122,6 @@ margin-left:    0;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .intro__inner {
     width: 100%;
     max-width: 970px;
@@ -132,7 +129,6 @@ margin-left:    0;
 
     text-align: center;
 }
-
 .intro__title {
     margin: 0 0 30px;
 
@@ -144,8 +140,6 @@ margin-left:    0;
     text-transform: uppercase;
 
 }
-
-
 .intro__subtitle {
     margin-bottom: 60px;
 
@@ -156,13 +150,9 @@ margin-left:    0;
 }
 
 
-
-
-
 /***************************
     Button
 ****************************/
-
 .btn {
     display: inline-block;
     vertical-align: top;
@@ -179,22 +169,16 @@ margin-left:    0;
     text-transform: uppercase;
     text-decoration: none;
 }
-
 .btn--red {
     background-color: #e84545;
 
     transition: background .1s linear;
 }
-
 .btn--red:hover {
     background-color: #af2828;
 
     transition: background .1s linear;
 }
-
-
-
-
 
 
 
