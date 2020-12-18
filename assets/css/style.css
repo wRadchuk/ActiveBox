@@ -1,4 +1,20 @@
 body {
+    margin: 0;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #6c7279;
+
     background-color: #000;
-    color: #fff;
+
+
+    /* Доп. шрифты
+    font-family: 'Cardo', serif;
+    font-family: 'Open Sans', sans-serif;
+    */
+
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
 }
