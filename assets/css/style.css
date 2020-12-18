@@ -27,6 +27,120 @@ body {
 
 
 /***************************
+    Container
+****************************/
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+
+
+/***************************
     Header
 ****************************/
+
+.header {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0;
+
+    border-bottom: 1px solid #515359;
+}
+
+
+
+/***************************
+    Nav
+****************************/
+
+.nav {
+    display: flex;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nav__link {
+    margin-left: 50px;
+
+    color: #fff;
+    text-decoration: none;
+    opacity: .75;
+
+    transition: opacity .1s linear;
+}
+
+.nav__link:first-child {
+margin-left:    0;
+}
+
+.nav__link:hover {
+    opacity: 1;
+
+    transition: opacity .1s linear;
+
+}
+
+
+
+/***************************
+    Intro
+****************************/
+
+.intro {
+    height: 750px;
+
+    padding-top: 100px;
+
+    background: #31344e url('../img/intro-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
