@@ -151,7 +151,6 @@ margin-left:    0;
 }
 
 
-
 /***************************
     Button
 ****************************/
@@ -159,6 +158,8 @@ margin-left:    0;
     display: inline-block;
     vertical-align: top;
     padding: 14px 40px;
+
+    text-align: center;
 
     border-radius: 2px;
     border: 0;
@@ -181,6 +182,9 @@ margin-left:    0;
 
     transition: background .1s linear;
 }
+.btn--long {
+    min-width: 280px;
+}
 
 
 /***************************
@@ -191,18 +195,15 @@ margin-left:    0;
     flex-wrap: wrap;
     margin: 95px 0;
 }
-
 .features__item {
     width: 33.33333%;
     padding: 0 40px;
     margin: 25px 0;
     text-align: center;
 }
-
 .features__icon {
     margin-bottom: 20px;
 }
-
 .features__title {
     margin-bottom: 15px;
 
@@ -211,7 +212,6 @@ margin-left:    0;
     font-weight: 700;
     text-transform: uppercase;
 }
-
 .features__text {
     font-size: 14px;
     line-height: 1.5;
@@ -226,7 +226,6 @@ margin-left:    0;
     display: flex;
     flex-wrap: wrap;
 }
-
 .works__item {
     width: 25%;
     height: 350px;
@@ -237,7 +236,6 @@ margin-left:    0;
     position: relative;
     overflow: hidden;
 }
-
 .works__photo {
     position: absolute;
     top: 50%;
@@ -247,7 +245,6 @@ margin-left:    0;
     transform: translate3d(-50%, -50%, 0);
 
 }
-
 .works__content {
     display: flex;
     flex-direction: column;
@@ -268,13 +265,11 @@ margin-left:    0;
 
     transition: opacity .1s linear;
 }
-
 .works__content:hover {
     opacity: 1;
 
     transition: opacity .1s linear;
 }
-
 .works__title {
     margin-bottom: 5px;
     font-size: 14px;
@@ -282,12 +277,10 @@ margin-left:    0;
     font-weight: 700;
     text-transform: uppercase;
 }
-
 .works__text {
     font-size: 14px;
     color: #fff;
 }
-
 
 
 /***************************
@@ -296,21 +289,17 @@ margin-left:    0;
 .team {
     margin: 100px 0 70px;
 }
-
 .team__inner {
     display: flex;
     flex-wrap: wrap;
     padding: 0 -15px;
 
 }
-
 .team__item {
     width: 25%;
     padding: 0 15px;
     margin-bottom: 30px;
 }
-
-
 .team__photo {
     margin-bottom: 20px;
 
@@ -318,7 +307,6 @@ margin-left:    0;
     max-width: 100%;
     height: auto;
 }
-
 .team__name {
     margin-bottom: 8px;
 
@@ -326,7 +314,6 @@ margin-left:    0;
     color: #2d3033;
 
 }
-
 .team__prof {
     margin-bottom: 15px;
 
@@ -334,7 +321,6 @@ margin-left:    0;
     color: #e84545;
     text-transform: uppercase;
 }
-
 .team__text {
     margin-bottom: 15px;
 
@@ -344,14 +330,15 @@ margin-left:    0;
 }
 
 
-
 /***************************
     Social
 ****************************/
 .social {
     display: flex;
 }
-
+.social--footer {
+    justify-content: center;
+}
 .social__item {
     margin: 0 4px;
 
@@ -367,21 +354,31 @@ margin-left:    0;
 
     transition: background-color .1s linear;
 }
-
 .social__item:hover {
     background-color: #e8ecee;
 }
-
 .social__item:hover .social__icon {
     fill: #000;
 }
-
+.social--footer .social__item {
+   background-color: transparent;
+    border-width: 2px;
+    border-color: #fff;
+    border-radius: 2px;
+}
+.social--footer .social__item:hover {
+    background-color: #fff;
+}
 .social__icon {
     display: block;
     height: 18px;
     fill: #c6cacc;
 
     transition: fill .1s linear;
+}
+
+.social--footer .social__icon {
+    fill: #fff;
 }
 
 
@@ -392,18 +389,15 @@ margin-left:    0;
     overflow: hidden;
     background-color: #53354a;
 }
-
 .reviews__item {
     display: flex;
     flex-wrap: wrap;
 }
-
 .reviews__photo {
     width: 50%;
     height: 500px;
     position: relative;
 }
-
 .reviews__img {
     position: absolute;
     top: 50%;
@@ -412,7 +406,6 @@ margin-left:    0;
 
     transform: translateY(-50%);
 }
-
 .reviews__content {
     display: flex;
     flex-direction: column;
@@ -421,7 +414,6 @@ margin-left:    0;
     width: 50%;
     padding-left: 80px;
 }
-
 .reviews__text {
     font-family: 'Cardo', sans-serif;
     font-style: italic;
@@ -431,7 +423,6 @@ margin-left:    0;
 
     margin-bottom: 20px;
 }
-
 .reviews__author {
     font-size: 13px;
     font-weight: 700;
@@ -440,7 +431,94 @@ margin-left:    0;
 }
 
 
+/***************************
+    Download
+****************************/
+.download {
+    margin: 90px 0;
 
+    text-align: center;
+}
+.download__title {
+    font-size: 28px;
+    font-weight: 300;
+    color: #2d3033;
+
+    margin-bottom: 15px;
+}
+.download__text {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #2d3033;
+
+    margin-bottom: 30px;
+}
+
+
+/***************************
+    Footer
+****************************/
+.footer {
+    background-color: #3a3e64;
+}
+.footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+
+     padding: 70px 0;
+}
+.footer__block {
+    width: 33.33333%;
+
+    padding: 0 15px;
+    text-align: center;
+
+}
+.footer__title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color:#fff;
+
+    margin-bottom: 15px;
+}
+.footer__addres {
+    font-size: 14px;
+    font-style: normal;
+    color: rgba(255, 255, 255, .5);
+    line-height: 1.5;
+}
+.footer__text {
+    font-size: 14px;
+    color: rgba(255, 255, 255, .5);
+    line-height: 1.5;
+}
+
+
+/***************************
+    Copyright
+****************************/
+.copyright {
+    padding: 20px 0;
+
+    background-color: #313454;
+}
+.copyright__text {
+    text-align: center;
+
+    font-size: 14px;
+
+    color: #808080;
+
+    line-height: 1.5;
+}
+.copyright__heart {
+    color: #ff3333;
+}
+.copyright__by {
+    color: #fff;
+}
 
 
 
