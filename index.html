@@ -4,19 +4,31 @@
     <meta charset="utf-8">
     <meta name="description" content="ActiveBox - бесплатный PSD макет">
     <meta name="keywords" content="ActiveBox, бесплатный, PSD, макет">
+    <meta name="google" content="notranslite" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>ActiveBox</title>
+
     <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 
+   <!-- Подключаем Google Fonts нужные нам  -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?update_name=gitcommit000019">
+    <!-- Подключаем стили для работы с Slick JS  -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <link rel="stylesheet" href="assets/css/style.css?update_name=gitcommit-wradchuk">
+    <link rel="stylesheet" href="assets/css/media.css?update_name=gitcommit-wradchuk">
+
+   <!-- Подключаем библиотеку JQuery 3.5.1 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 
 </head>
+
 <body>
 
 
@@ -43,26 +55,31 @@
 
 
 <!-- Header -->
-<header class="header">
+<header class="header" id="jsHeader">
     <div class="container">
         <div class="header__inner">
             <div class="header__logo">
                 <img src="assets/img/activebox-logo.png" alt="ActiveBox">
             </div>
 
-            <nav class="nav">
-                <a class="nav__link" href="#">Features</a>
-                <a class="nav__link" href="#">Works</a>
-                <a class="nav__link" href="#">Our Team</a>
-                <a class="nav__link" href="#">Testimonials</a>
-                <a class="nav__link" href="#">Download</a>
+            <nav class="nav" id="jsNav">
+                <a class="nav__link" href="#" data-scroll="#jsFeatures">Features</a>
+                <a class="nav__link" href="#" data-scroll="#jsWorks">Works</a>
+                <a class="nav__link" href="#" data-scroll="#jsTeam">Our Team</a>
+                <a class="nav__link" href="#" data-scroll="#jsReviews">Testimonials</a>
+                <a class="nav__link" href="#" data-scroll="#jsDownload">Download</a>
             </nav>
+
+            <button class="burger" id="jsNavToggle">
+                <span class="burger__item">Menu</span>
+            </button>
+
         </div> <!-- /.header__inner -->
     </div> <!-- /.container -->
 </header>
 
 <!-- Intro -->
-<div class="intro">
+<div class="intro" id="jsIntro">
     <div class="container">
         <div class="intro__inner">
             <h1 class="intro__title">Your Favorite One Page Multi Purpose Template</h1>
@@ -76,7 +93,7 @@
 
 <!-- Features -->
 <div class="container">
-    <div class="features">
+    <div class="features" id="jsFeatures">
 
         <div class="features__item">
             <img class="features__icon" src="assets/img/features/features-1.png" alt="features-1">
@@ -114,7 +131,7 @@
 </div> <!-- /.container -->
 
 <!-- Works -->
-<div class="works">
+<div class="works" id="jsWorks">
 
    <div class="works__item">
        <img class="works__photo" src="assets/img/works/work-1.jpg" alt="works-1">
@@ -177,7 +194,7 @@
 </div> <!-- /.works -->
 
 <!-- Team -->
-<div id="team" class="team">
+<div class="team" id="jsTeam">
      <div class="container">
         <div class="team__inner">
 
@@ -306,22 +323,44 @@
 </div> <!-- /.team -->
 
 <!-- Reviews -->
-<div class="reviews">
+<div class="reviews" id="jsReviews">
     <div class="container">
-        <div class="reviews__item">
-            <div class="reviews__photo">
-                <img class="reviews__img" src="assets/img/reviews/review-1.jpg" alt="reviews-1">
-            </div>
-            <div class="reviews__content">
-                <div class="reviews__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</div>
-                <div class="reviews__author">Susan Sims, Interaction Designer at XYZ</div>
-            </div>
-        </div>
+        <div class="reviews__slider" id="jsReviewsSlider">
+
+            <!--  Оборачиваем классы reviews__item в пустые div блоки чтобы слайдер не выдавал лишние стили нашим айтемам -->
+
+           <div class="slick-item">  <!-- обертка -->
+                <div class="reviews__item">
+                    <div class="reviews__photo">
+                        <img class="reviews__img" src="assets/img/reviews/review-1.jpg" alt="reviews-1">
+                    </div>
+                    <div class="reviews__content">
+                        <div class="reviews__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</div>
+                        <div class="reviews__author">Susan Sims, Interaction Designer at XYZ</div>
+                    </div>
+                </div>
+            </div> <!-- /обертка -->
+
+            <div class="slick-item">  <!-- обертка -->
+                <div class="reviews__item">
+                    <div class="reviews__photo">
+                        <img class="reviews__img" src="assets/img/reviews/review-2.jpg" alt="reviews-2">
+                    </div>
+                    <div class="reviews__content">
+                        <div class="reviews__text">“Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur....”</div>
+                        <div class="reviews__author">Susan Sims, Interaction Designer at XYZ</div>
+                    </div>
+                </div>
+            </div>  <!-- /обертка -->
+
+            <!--  Оборачиваем классы reviews__item в пустые div блоки чтобы слайдер не выдавал лишние стили нашим айтемам -->
+
+        </div><!-- /.jsReviewsSlider -->
     </div> <!-- /.container -->
 </div> <!-- /.reviews -->
 
 <!-- Download -->
-<div class="download">
+<div class="download"  id="jsDownload">
     <div class="container">
        <h4 class="download__title">Are You Ready to Start? Download Now For Free!</h4>
        <div class="download__text">Fusce dapibus, tellus ac cursus commodo</div>
@@ -389,5 +428,14 @@
 </footer> <!-- /.footer -->
 
 
+<!-- Javascript begin-->
+
+<!-- Подключаем Slick JS  -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- Подключаем наши скрипты  -->
+<script src="assets/js/main.js"></script>
+
+
+<!-- Javascript end -->
 </body>
 </html>

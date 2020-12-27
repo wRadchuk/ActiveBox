@@ -23,13 +23,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 
     background-color: #fff;
-
-
-    /* Доп. шрифты
-    font-family: 'Cardo', serif;
-    font-family: 'Open Sans', sans-serif;
-    */
-
 }
 *, *:before, *:after {
     box-sizing: border-box;
@@ -69,6 +62,13 @@ p {
     z-index: 1000;
 
 }
+.header.jsFixed {
+    height: auto;
+    position: fixed;
+
+    background-color: #31344e;
+}
+
 .header__inner {
     display: flex;
     justify-content: space-between;
@@ -78,6 +78,12 @@ p {
     border-bottom: 1px solid #515359;
 }
 
+.header.jsFixed .header__inner {
+    padding: 3px 0;
+
+    border-bottom: 0;
+
+}
 
 /***************************
     Nav
@@ -237,6 +243,7 @@ margin-left:    0;
     overflow: hidden;
 }
 .works__photo {
+    min-width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -389,9 +396,18 @@ margin-left:    0;
     overflow: hidden;
     background-color: #53354a;
 }
+.reviews__slider {
+    height: 500px;
+    overflow: hidden;
+}
+
+.reviews__slider.slick-initialized {
+    height: auto;
+}
 .reviews__item {
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 .reviews__photo {
     width: 50%;
@@ -428,6 +444,52 @@ margin-left:    0;
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0 0 10px;
+    list-style: none;
+    width: 50%;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.slick-dots li {
+    margin: 0px 5px;
+}
+
+.slick-dots button {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+
+    background: #fff;
+    border-radius: 50%;
+    opacity: .5;
+    cursor: pointer;
+
+    border: 0;
+    font-size: 0;
+    color: transparent;
+
+
+    transition: .1s opacity linear;
+}
+
+.slick-dots button:focus {
+    outline: 0;
+}
+
+.slick-dots .slick-active button {
+    opacity: 1;
+
+    transition: .1s opacity linear;
 }
 
 
@@ -521,16 +583,47 @@ margin-left:    0;
 }
 
 
-
 /***************************
-    Media
+    Burger
 ****************************/
+.burger {
+    display: none;
+    padding: 10px 2px;
 
+    background: none;
+    border: 0;
 
+    cursor: pointer;
+}
 
+.burger__item {
+    display: block;
+    width: 30px;
+    height: 3px;
 
+    background-color: #fff;
 
+    font-size: 0;
+    color: transparent;
 
+    position: relative;
 
+}
+.burger__item:before, .burger__item:after {
+    content: "";
+    width: 100%;
+    height: 100%;
 
+    background-color: #fff;
+
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+.burger__item:before {
+    top: -8px;
+}
+.burger__item:after {
+    bottom: -8px;
+}
 
